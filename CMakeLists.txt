@@ -214,6 +214,13 @@ set(CPACK_COMPONENT_DOC-DEVKIT-FULL_GROUP "Documentation")
 set(CPACK_COMPONENT_DOC-DEVKIT-INTERNAL_DISPLAY_NAME "Vorpaline Internal Developer Kit Documentation")
 set(CPACK_COMPONENT_DOC-DEVKIT-INTERNAL_GROUP "Documentation")
 
+set(CMAKE_THREAD_LIBS_INIT "-lpthread")
+set(CMAKE_HAVE_THREADS_LIBRARY 1)
+set(CMAKE_USE_WIN32_THREADS_INIT 0)
+set(CMAKE_USE_PTHREADS_INIT 1)
+set(THREADS_PREFER_PTHREAD_FLAG ON)
+
+
 # Copy the helper script to build individual packages to the binary directory
 configure_file(
     tools/make_package.pl.in
